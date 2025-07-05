@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e40af 100%) !important;
+}
+
+.tkj-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e40af 100%);
+}
+
+.tech-pattern {
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
+}
+
+.network-icon {
+    position: relative;
+}
+
+.network-icon::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(0.8); opacity: 1; }
+}
+
+.fade-in {
+    animation: bounceIn 0.6s ease-out;
+}
+
+.slide-in {
+    animation: slideUp 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+    0% { 
+        opacity: 0; 
+        transform: scale(0.3) rotate(-10deg);
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.05) rotate(2deg);
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes slideUp {
+    from { 
+        transform: translateY(50px) scale(0.9); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateY(0) scale(1); 
+        opacity: 1; 
+    }
+}
+
+.success-animation {
+    animation: successPulse 0.6s ease-in-out;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.gradient-bg {
+    background: #3b82f6;
+}
+
+.smk-bg {
+    background: #3b82f6;
+}
+
+.card-shadow {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 64, 175, 0.4);
+}
+
+.welcome-screen {
+    animation: welcomeEntrance 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes welcomeEntrance {
+    0% { 
+        opacity: 0; 
+        transform: scale(0.3) rotateY(180deg);
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.1) rotateY(90deg);
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1) rotateY(0deg);
+    }
+}
